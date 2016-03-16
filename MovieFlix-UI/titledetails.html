@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="movieflix">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Movie Flix</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/title.css" />
+    <link rel="stylesheet" type="text/css" href="css/rating.css" />
+    <link rel="shortcut icon" href="img/m.png">
+
+</head>
+<body ng-controller="MainController as movieVm">
+<div id="slideBar" >
+    <img style="float:left; " src="img/logo.png" align-items="flex-start" alt="logo" width="200"/>
+    <div class="topNaviagationLink"><a href="welcome.html">Home</a></div>
+    <div class="topNaviagationLink"><a href="browsecatalog.html">Browse</a></div>
+    <div class="topNaviagationLink"><a href="filter.html">Sort Catalog</a></div>
+    <div class="topNaviagationLink"><a href="addmovie.html">AddMovie</a></div>
+    <div class="topNaviagationLink"><a href="welcome.html">Sign Out</a></div>
+
+</div>
+
+<div id="mainPicture" style="height:520px;position:relative;top:20px;">
+    <!-- header -->
+    <div id="header">
+    <!-- content -->
+    <div id="content">
+        <ul ng-repeat="cinema in movieVm.cinemas">
+
+            <img src= "{{cinema.Poster}}">
+
+        </ul>
+
+    </div>
+</div>
+</div>
+<div class="contentBox">
+    <div class="innerBox">
+        </br>  </br>
+
+        <br/>
+
+        <div class="l-column" style="padding:150px">
+            <h2>choose rating</h2>
+                <span class="star-rating" >
+  <input type="radio" name="rating" value="1"><i></i>
+  <input type="radio" name="rating" value="2"><i></i>
+  <input type="radio" name="rating" value="3"><i></i>
+  <input type="radio" name="rating" value="4"><i></i>
+  <input type="radio" name="rating" value="5"><i></i>
+    </span>
+            </br>  </br>
+            <h2><u>Title Description</u></h2>
+            <br/>
+            <ul ng-repeat="cinema in movieVm.cinemas">
+                <b>Movie name:</b>{{cinema.Title}}
+                <b>Genre: </b>{{cinema.Genre}}<br/><br/>
+                <b>Director: </b>{{cinema.Director}}<br/><br/>
+                <b>Actors:   </b>{{cinema.Actors}}<br/><br/>
+                <b>IMDB Rating: </b>{{cinema.imdbRating}}<br/><br/>
+                <b>Plot: </b>{{cinema.Plot}} <br/><br/>
+
+            </ul><hr>
+            <hr>
+            <div class="glyphicon glyphicon-comment" >
+                <form action="/html/tags/html_form_tag_action.cfm" method="post">
+
+    <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;" placeholder="Add comment">
+</textarea>
+                    </br></br>
+                    <a href="#" class="btn btn-primary" role="button">Post</a>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+        <script src="js/titleapp.js"></script>
+        <script src="js/title.js"></script>
+
+        <footer> &copy:2016 MovieFlix, Inc</footer>
+    </div>
+</div>
+</body>
+</html>
+
+

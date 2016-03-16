@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="movieflix">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/title.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="shortcut icon" href="img/m.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body >
+<div ng-controller="MainController as movieVm">
+<div id="slideBar" >
+
+    <img style="float:left; " src="img/logo.png" align-items="flex-start" alt="logo" width="200"/>
+    <div class="topNaviagationLink"><a href="welcome.html">Home</a></div>
+    <div class="topNaviagationLink"><a href="browsecatalog.html">Browse</a></div>
+    <div class="topNaviagationLink"><a href="filter.html">Sort Catalog</a></div>
+    <div class="topNaviagationLink"><a href="#">Sign Out</a></div>
+
+</div>
+
+<div id="mainPicture" style="height:520px;position:relative;top:20px;">
+    <!-- header -->
+    <div id="header">
+        <h1><div style="...">Trending Now</div></h1>
+    </div>
+    <div ng-controller="MainController as movieVm">
+
+    <div class="row" >
+
+        <div class="col-lg-4" >
+            <div class="input-group" >
+                <div class="input-group-btn" >
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search <span class="caret"> </span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" ng-click="">Type</a></li>
+                        <li><a href="#" ng-click="">Year</a></li>
+                        <li><a href="#" ng-click="">Genre</a></li>
+                    </ul>
+
+                </div><!-- /btn-group -->
+
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control" aria-label="..." >
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+
+    </div><!-- /.row -->
+    <!-- content -->
+    <div id="content">
+        <div id="container" >
+            <div class="timeline-container"></div>
+            <div   class= "glyphicon glyphicon-menu-left" ></div>
+
+            <ul class="rig columns-4">
+                ng-model="mainVm.newUser.firstName
+                <li >
+                    <div class="caption">
+                    </div>
+                </li>
+
+
+            </ul>
+            <div class="col-sm-6" ng-include="'browser.tmpl.html'">
+
+            </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+    <script src="js/titleapp.js"></script>
+    <script src="js/title.js"></script>
+</div>
+</body>
+</html>
+
+

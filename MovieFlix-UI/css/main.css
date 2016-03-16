@@ -1,0 +1,50 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.fadein {
+    position: relative;
+    width: 800px;
+    height: 350px;
+}
+
+.fadein img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4px;
+    border: 2px solid #021a40;
+    background-color: #ff0
+}
+.groupHeader{
+    background-color: #000000;
+    opacity: 0.5;
+    color: #ffffff;
+    margin-left: 200px;
+}
+
+.b{
+    background-color: #000000;
+    opacity: 0.5;
+    color: #ffffff;
+    margin-left: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

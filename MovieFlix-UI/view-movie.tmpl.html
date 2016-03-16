@@ -1,0 +1,25 @@
+
+<input type="search" ng-model="mainVm.searchText" placeholder="Search Here" class="form-control">
+<hr>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Action</th>
+        <th >Name</th>
+        <th >Genre</th>
+        <th >Actor</th>
+        <th >language</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in mainVm.titles | filter:mainVm.searchText | orderBy: mainVm.sortOrder.by: mainVm.sortOrder.reverse">
+        <td><i ng-click="mainVm.deleteUser(title.id)" class="glyphicon glyphicon-remove"></i></td>
+        <td>{{this.title.title}}</td>
+        <td>{{title.genre}}</td>
+        <td>{{title.actors}}</td>
+        <td>{{title.language}}</td>
+
+    </tr>
+    </tbody>
+</table>

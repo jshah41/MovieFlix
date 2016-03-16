@@ -1,0 +1,25 @@
+<input type="search" ng-model="mainVm.searchText" placeholder="Search Here" class="form-control">
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th ng-click="mainVm.sortOrder.by='name'; mainVm.sortOrder.reverse = !mainVm.sortOrder.reverse;">Id</th>
+      <th ng-click="mainVm.sortOrder.by='email'; mainVm.sortOrder.reverse = !mainVm.sortOrder.reverse;">Name</th>
+      <th ng-click="mainVm.sortOrder.by='company.name'; mainVm.sortOrder.reverse = !mainVm.sortOrder.reverse;">email</th>
+      <th>password</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in mainVm.users | filter:mainVm.searchText | orderBy: mainVm.sortOrder.by: mainVm.sortOrder.reverse">
+      <td><i ng-click="mainVm.deleteUser(user.id)" class="glyphicon glyphicon-remove"></i></td>
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}} {{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      
+     
+    </tr>
+  </tbody>
+</table>

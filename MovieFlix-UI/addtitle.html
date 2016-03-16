@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="movieflix">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Movie Flix</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/title.css" />
+    <link rel="stylesheet" type="text/css" href="css/rating.css" />
+    <link rel="shortcut icon" href="img/m.png">
+
+</head>
+<body ng-controller="MainController as movieVm">
+<div id="slideBar" >
+    <img style="float:left; " src="img/logo.png" align-items="flex-start" alt="logo" width="200"/>
+    <div class="topNaviagationLink"><a href="welcome.html">Home</a></div>
+    <div class="topNaviagationLink"><a href="browsecatalog.html">Browse</a></div>
+    <div class="topNaviagationLink"><a href="filter.html">Sort Catalog</a></div>
+    <div class="topNaviagationLink"><a href="welcome.html">Sign Out</a></div>
+
+</div>
+ <!-- header -->
+    <div id="header">
+        <!-- content -->
+        <div id="content">
+
+    </div>
+</div>
+<div class="contentBox">
+    <div class="innerBox">
+
+        <div class="l-column" style="padding:150px">
+            <form name="movieadd" action="#" ng-controller="MainController as movieVm" ng-submit="submitForm()">
+<h2>Enter the Movie/TV show details to insert</h2>
+                </br>                </br>
+
+                ID: <input type="text" ng-model="movieVm.id"> <br/><br/>
+                Title:    <input type="text" name="movieVm.title">    <br/><br/>
+                Year: <input type="text" ng-model="movieVm.year"> <br/><br/>
+                Genre:    <input type="text" name="movieVm.genre">    <br/><br/>
+                Type: <input type="text" ng-model="movieVm.type"> <br/><br/>
+
+
+                <button type="submit" class="btn btn-primary" ng-click="movieVm.submit(vm.user)">Submit</button>
+
+            </form>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+        <script src="js/titleapp.js"></script>
+        <script src="js/title.js"></script>
+
+        <footer> &copy:2016 MovieFlix, Inc</footer>
+    </div>
+</div>
+</body>
+</html>
+
+
